@@ -10,9 +10,12 @@ resolvers ++= Seq(
 
 libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging"  % "3.1.0",
-  "org.slf4j"                  % "slf4j-api"       % "1.7.10",
   "ch.qos.logback"             % "logback-classic" % "1.1.2",
   "com.typesafe.akka"          %% "akka-actor"     % "2.3.10",
+  "joda-time"                  % "joda-time"       % "2.7",
   "net.debasishg"              %% "redisclient"    % "2.15",
-  "org.scalaj"                 %% "scalaj-http"    % "1.1.4"
+  "org.scalacheck"             %% "scalacheck"     % "1.12.3" % "test",
+  "org.scalaj"                 %% "scalaj-http"    % "1.1.4",
+  "org.scalatest"              %% "scalatest"      % "2.2.4" % "test",
+  "org.slf4j"                  % "slf4j-api"       % "1.7.10"
 )
