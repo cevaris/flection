@@ -11,8 +11,6 @@ trait MovingAverage {
     val longMA = calculate(long, ls)
     val shortMA = calculate(short, ls)
 
-    println(s"long: $longMA, short: $shortMA")
-
     if (longMA > shortMA)
       Downtrend
     else if (abs(longMA - shortMA) < Utils.precision)
@@ -24,10 +22,18 @@ trait MovingAverage {
 
 object MovingAverage {
 
-  trait Trend
-  object Uptrend extends Trend
-  object Downtrend extends Trend
-  object Flatline extends Trend
+  trait Trend {
+    def show: String
+  }
+  object Uptrend extends Trend {
+    def show: String = "Uptrend"
+  }
+  object Downtrend extends Trend {
+    def show: String = "Downtrend"
+  }
+  object Flatline extends Trend {
+    def show: String = "Flatline"
+  }
 
 }
 
